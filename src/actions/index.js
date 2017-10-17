@@ -9,9 +9,10 @@ export function fetchWeather(city) {
   const url = `${ROOT_URL}&q=${city},us`;
   const request = axios.get(url);
 
+  console.log('Request:', request);
+
   return {
     type: FETCH_WEATHER,
     payload: request
   }
 }
-//http://api.openweathermap.org/data/2.5/forecast?q=New%20York,us&appid=9d89744991dfbcc4d7226c36a0c79880
